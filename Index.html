@@ -22,36 +22,54 @@
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
 
-    <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
- <![endif]-->
-
   </head>
 
   <body>
+  <center>
+<div id="bar">
 
+</div>
+</center>
     <div class="container">
-
+    	<center>
+			Log In
+		</center>
       <div id="login">
 
-        <form action="javascript:void(0);" method="get">
+        <form name="loginform" action="javascript:void(0);" method="get">
 
           <fieldset class="clearfix">
 
-            <p><span class="fontawesome-user"></span><input type="text" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-            <p><input type="submit" value="Sign In"></p>
+            <p><span class="fontawesome-user"></span><input type="text" name="usr" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> 
+            <p><span class="fontawesome-lock"></span><input type="password" name="pword" value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> 
+            <p><input onclick="validate()" type="submit" value="Sign In"></p>
 
           </fieldset>
 
         </form>
 
-        <p>Not a member? <a href="file:///W:/HTML/signup.html">Sign up now</a><span class="fontawesome-arrow-right"></span></p>
+        <p>Not a member? <a href="signup.html">Sign up now</a><span class="fontawesome-arrow-right"></span></p>
 
       </div> <!-- end login -->
 
     </div>
-
+<script>
+function validate() {
+        var un = document.loginform.usr.value;
+        var pw = document.loginform.pword.value;
+        var username = "admin"; 
+        var password = "fuckyou";
+        if ((un == username) && (pw == password)) {
+            return true;
+            window.open("file:///C:/Users/Ari/Desktop/tomrev.github.io/home.html")
+        }
+        else {
+            alert ("Login was unsuccessful, please check your username and password");
+            return false;
+        }
+  }
+</script>
+</script>
   </body>
 </html>
 
