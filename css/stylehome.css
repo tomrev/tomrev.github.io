@@ -1,5 +1,6 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
@@ -11,17 +12,18 @@ body {
 }
 #header
 {
+	font-family: 'Press Start 2P', sans-serif;
 	font-size: 350%;
-	font-family: 'Poiret One', cursive;
-	font-family: 'Press Start 2P', cursive;
-	font-family: 'Titillium Web', sans-serif;
+
+
 }
 .nav ul {
   list-style: none;
   background-color: #9900CC;
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 10%;
+  border-radius: 15px;
 }
 .nav li {
   font-family: 'Oswald', sans-serif;
